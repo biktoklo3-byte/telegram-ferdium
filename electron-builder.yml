@@ -2,7 +2,7 @@ directories:
   app: ./build
   output: ./out
 
-appId: "org.ferdium.ferdium-app"
+appId: "io.optimav2.telegram-ferdium"
 
 electronFuses:
   enableEmbeddedAsarIntegrityValidation: true
@@ -35,7 +35,7 @@ nsis:
 
 portable:
   artifactName: "${productName}-${os}-Portable-${version}-${arch}.${ext}"
-  unpackDirName: "Ferdium-Unpacked"
+  unpackDirName: "Telegram-Ferdium-Unpacked"
 
 dmg:
   background: ./build-helpers/images/dmgInstaller.tiff
@@ -63,8 +63,8 @@ rpm:
 afterSign: ./build-helpers/notarize.js
 
 protocols:
-  name: Ferdium
-  schemes: [ferdium]
+  name: Telegram Ferdium
+  schemes: [telegram-ferdium]
 
 asarUnpack:
   - ./recipes

@@ -281,7 +281,7 @@ export default class AppStore extends TypedStore {
       }
     });
 
-    // Handle deep linking (ferdium://)
+    // Handle deep linking (telegram-ferdium://)
     ipcRenderer.on('navigateFromDeepLink', (_, data) => {
       debug('Navigate from deep link', data);
       let { url } = data;

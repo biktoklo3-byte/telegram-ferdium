@@ -551,7 +551,12 @@ export const FILE_SYSTEM_SETTINGS_TYPES = ['app', 'proxy', 'shortcuts'];
 export const LOCAL_SERVER = 'You are using Ferdium without a server';
 export const SERVER_NOT_LOADED = 'Ferdium::SERVER_NOT_LOADED';
 
-export const ALLOWED_PROTOCOLS = ['https:', 'http:', 'ftp:', 'ferdium:'];
+export const ALLOWED_PROTOCOLS = [
+  'https:',
+  'http:',
+  'ftp:',
+  'telegram-ferdium:',
+];
 
 export const DEFAULT_TODOS_WIDTH = 300;
 export const TODOS_MIN_WIDTH = 200;
@@ -582,7 +587,7 @@ export const DEFAULT_APP_SETTINGS = {
   privateNotifications: false,
   clipboardNotifications: true,
   notifyTaskBarOnMessage: false,
-  showDisabledServices: true,
+  showDisabledServices: false,
   isTwoFactorAutoCatcherEnabled: false,
   twoFactorAutoCatcherMatcher: 'token, code, sms, verify',
   showServiceName: false,
@@ -620,18 +625,18 @@ export const DEFAULT_APP_SETTINGS = {
   wakeUpHibernationStrategy: '0', // seconds -- 0 means do the same as hibernationStrategy
   wakeUpHibernationSplay: true,
   inactivityLock: 0,
-  automaticUpdates: true,
+  automaticUpdates: false,
   universalDarkMode: true,
   userAgentPref: '',
   downloadFolderPath: '',
   adaptableDarkMode: true,
   accentColor: DEFAULT_ACCENT_COLOR,
   progressbarAccentColor: DEFAULT_ACCENT_COLOR,
-  serviceRibbonWidth: 68,
+  serviceRibbonWidth: 45,
   sidebarServicesLocation: SIDEBAR_SERVICES_LOCATION_TOPLEFT,
   iconSize: iconSizeBias,
-  sentry: true,
-  navigationBarBehaviour: 'custom',
+  sentry: false,
+  navigationBarBehaviour: 'never',
   webRTCIPHandlingPolicy: disableWebRTCIPHandlingPolicy,
   searchEngine: SEARCH_ENGINE_STARTPAGE,
   translatorLanguage: 'en',
@@ -639,11 +644,11 @@ export const DEFAULT_APP_SETTINGS = {
   useHorizontalStyle: false,
   hideCollapseButton: false,
   isMenuCollapsed: false,
-  hideRecipesButton: false,
+  hideRecipesButton: true,
   hideSplitModeButton: true,
   useGrayscaleServices: false,
   grayscaleServicesDim: 50,
-  hideWorkspacesButton: false,
+  hideWorkspacesButton: true,
   hideNotificationsButton: false,
   hideSettingsButton: false,
   hideDownloadButton: false,
@@ -652,7 +657,7 @@ export const DEFAULT_APP_SETTINGS = {
   hideAllServicesWorkspace: false,
   liftSingleInstanceLock: false,
   enableLongPressServiceHint: false,
-  isTodosFeatureEnabled: true,
+  isTodosFeatureEnabled: false,
   customTodoServer: '',
   locale: 'en-US',
   keepAllWorkspacesLoaded: false,
